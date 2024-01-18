@@ -1,0 +1,73 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ClickCounter.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ClickCounter.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ClickCounter">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<DockPanel>
+		<Border
+			BorderBrush="Aquamarine"
+			BorderThickness="2"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Padding="40"
+			CornerRadius="12"
+			>
+			<StackPanel
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				>
+				<TextBlock HorizontalAlignment="Center"
+			   Text="Click Counter"
+			   FontFamily="Inter"
+			   FontSize="42"
+				FontStyle="Italic"
+				   TextDecorations="Underline"
+				   />
+				<StackPanel Orientation="Horizontal">
+					<TextBlock 
+						Text="You have clicked "
+						FontSize="22"
+						FontFamily="Inter"
+						/>
+					<TextBlock
+						Text="10"
+						FontSize="22"
+						FontFamily="Inter"
+						/>
+					<TextBlock
+						Text=" times"
+						FontSize="22"
+						FontFamily="Inter"
+					/>
+				</StackPanel>
+
+				<Button HorizontalAlignment="Center">
+					<StackPanel Orientation="Horizontal">
+						<TextBlock
+							Text="10"
+							/>
+						<TextBlock
+							Text="Times"
+							/>
+					</StackPanel>
+				</Button>
+				
+			</StackPanel>
+		
+		</Border>
+		
+
+	</DockPanel>
+</Window>
