@@ -53,7 +53,8 @@
 					/>
 				</StackPanel>
 
-				<Button HorizontalAlignment="Center">
+				<Button HorizontalAlignment="Center"
+						Command="{Binding OnClickCounterClick}">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock
 							Text="10"
